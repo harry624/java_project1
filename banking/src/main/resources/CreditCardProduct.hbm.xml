@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.model.CreditCardProduct" table="CreditCard">
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="Type">
+            <column name="Type"/>
+        </property>
+        <property name="APR">
+            <column name="APR"/>
+        </property> 
+        <property name="Credit_Limit">
+            <column name="Credit_Limit"/>
+        </property>        
+        <property name="Reward_Eligible">
+            <column name="Reward_Eligible"/>
+        </property>                
+      	<property name="Offering_Date" type="date">
+            <column name="Offering_Date"/>
+        </property>
+        <property name="Expiration_Date" type="date">
+            <column name="Expiration_Date"/>
+        </property>
+    </class>
+</hibernate-mapping>
